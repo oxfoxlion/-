@@ -289,7 +289,7 @@ img{
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    background-image: url(/images/homepage-work1-bg.png);
+    background-image: url(./images/homepage-work1-bg.png);
     width: 100%;
     padding: 10% 15%;
 }
@@ -320,7 +320,7 @@ img{
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    background-image: url(/images/homepage-work2-lg.png);
+    background-image: url(./images/homepage-work2-lg.png);
     width: 100%;
     padding: 10% 5%;
 }
@@ -348,7 +348,7 @@ img{
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url(/images/homepage-work3-bg.png);
+    background-image: url(./images/homepage-work3-bg.png);
     width: 100%;
     padding: 10% 7%;
     gap: 2%;
@@ -377,7 +377,7 @@ img{
 /*servies*/
 
 .serives{
-    background-image: url(/images/homepage-services-bg.png);
+    background-image: url(./images/homepage-services-bg.png);
 }
 
 .serives-items{
@@ -396,7 +396,7 @@ img{
 }
 
 .serives-items-list div{
-    background-image: url(/images/service-item-bg.png);
+    background-image: url(./images/service-item-bg.png);
     width: 306px;
     height: 306px;
     display: flex;
@@ -507,7 +507,7 @@ img{
 /*footer*/
 .footer{
     margin-top: 120px;
-    background-image: url(/images/footer-bg-lg.png);
+    background-image: url(./images/footer-bg-lg.png);
     padding: 80px 16%;
     display: flex;
     justify-content:space-between;
@@ -707,7 +707,7 @@ img{
             justify-content: center;
             align-items: center;
             position: relative;
-            background-image: url(/images/homepage-work3-bg.png);
+            background-image: url(./images/homepage-work3-bg.png);
             width: 100%;
             padding: 10% 5%;
             gap: 2%;
