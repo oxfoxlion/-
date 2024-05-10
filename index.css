@@ -1,0 +1,779 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    max-width:100%; /*設定為父元素的寬度*/
+    height:auto;
+    }
+
+ *,*:before,*:after{
+        box-sizing:border-box;
+        }
+
+/*從這裡開始*/
+
+.wrap{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/*header*/
+.header{
+    display: flex;
+    justify-content:center;
+    border-bottom: 1px solid #F1F1F1;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    top:28px;
+    left: 10%; /*希望隨著螢幕縮減而減少的部分再使用%*/
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    gap:40px; /*使用%數會導致文字換行*/
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.list-close{
+    display: none;
+}
+
+.list li a{
+    display: block;
+    padding:4px 8px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    width:100%;
+}
+
+.list li a:hover{
+    font-weight: 600;
+}
+
+/*content*/
+
+/*hero*/
+
+.hero{
+    display: flex;
+    gap:24px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero-lg{
+    width:60%;
+}
+
+
+.hero-intro-container{
+    margin-bottom: 60px;
+}
+
+.hero-intro-container h1{
+    margin-bottom: 24px;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.hero-intro-items div{
+    display: flex;
+    flex-direction: column;
+    gap:8px;
+    margin-bottom: 16px;
+}
+
+.hero-intro-items .hero-intro-items-person p{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: "Noto Sans TC", sans-serif;
+    color: #5B5B5B;
+}
+
+.hero-intro-items-person p span{
+    z-index: 5;
+    position: relative;
+}
+
+.hero-intro-items-person p span img{
+    z-index: -3;
+    position: absolute;
+    bottom:0px;
+    left:0px;
+}
+
+.hero-intro-items p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Noto Sans TC", sans-serif;
+    color: #C1C1C1;
+
+}
+
+.hero-intro-link{
+    display: flex;
+    gap:16px;
+}
+
+/*title*/
+
+.title{
+    display: flex;
+    gap:16px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+}
+
+.title h2{
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: 600;
+    font-family: "Noto Sans TC", sans-serif;
+    color: #3B3B3B;
+}
+
+/*work:intro*/
+.work-intro{
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px); /*模糊效果*/
+    border-radius: 24px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-intro-content {
+    border-bottom: 1px solid #F1F1F1;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 80px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.work-intro-content div {
+    margin-bottom: 24px;
+}
+
+.work-intro-content div h3{
+    font-size: 28px;
+    line-height: 33.6px;
+    font-weight: 700;
+    font-family: "Noto Sans TC", sans-serif;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.work-intro-content div p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Noto Sans TC", sans-serif;
+    color: #FFFFFF;
+}
+
+.work-intro-content ul{
+    display: flex;
+    gap:16px;
+    margin-bottom: 40px;
+}
+
+.work-intro-content ul li a{
+    display: block;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Noto Sans TC", sans-serif;
+    color: #3B3B3B;
+    text-decoration: none;
+}
+
+.button-link{
+    background: #000000;
+    margin-top: 40px;
+    margin-bottom: 56px;
+    border-radius: 5px;
+}
+
+.button-link a{
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    padding: 16px 32px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    font-family: "Noto Sans TC", sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.button-link a span{
+    width: 24px;
+    height: 24px;
+}
+
+/*work1*/
+.work1{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    background-image: url(/images/homepage-work1-bg.png);
+    width: 100%;
+    padding: 10% 15%;
+}
+
+.work1:before{
+    z-index: 3;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* 黑色，40%透明 */
+    pointer-events: none; /* 讓點擊事件穿透偽元素 */
+}
+
+.work1-img{
+    z-index: 1;
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    width:40%;
+}
+
+/*work2*/
+.work2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background-image: url(/images/homepage-work2-lg.png);
+    width: 100%;
+    padding: 10% 5%;
+}
+
+.work2:before{
+    z-index: 2;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* 黑色，40%透明 */
+    pointer-events: none; /* 讓點擊事件穿透偽元素 */
+}
+
+.work2 .work-intro{
+    background-color: rgba(44, 43, 43, 0.074);
+    backdrop-filter: blur(6px); /*模糊效果*/
+}
+
+/*work3*/
+.work3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-image: url(/images/homepage-work3-bg.png);
+    width: 100%;
+    padding: 10% 7%;
+    gap: 2%;
+}
+
+.work3:before{
+    z-index: 3;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* 黑色，40%透明 */
+    pointer-events: none; /* 讓點擊事件穿透偽元素 */
+}
+
+.work3-img{
+    z-index: 4;
+    /* position: absolute; */
+    /* bottom: 0px;
+    left: 10%; */
+    width:45%;
+}
+
+/*servies*/
+
+.serives{
+    background-image: url(/images/homepage-services-bg.png);
+}
+
+.serives-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.serives-items-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    gap:24px;
+}
+
+.serives-items-list div{
+    background-image: url(/images/service-item-bg.png);
+    width: 306px;
+    height: 306px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:24px;
+    border-radius: 24px;
+}
+
+.serives-items-list div h3{
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 700;
+    color: #FFFFFF;
+    font-family: "Noto Sans TC", sans-serif; 
+}
+
+.know-more{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 120px;
+}
+
+.know-more p{
+    font-size: 28px;
+    line-height: 33.6px;
+    font-weight: 600;
+    color: #3B3B3B;
+    font-family: "Noto Sans TC", sans-serif; 
+}
+
+/* article */
+.articles-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*ariticle-card*/
+.cardbox{
+    display: flex;
+    gap:24px;
+    flex-wrap: wrap;    
+    justify-content: center;
+}
+
+.card{
+    width: 416px;
+}
+
+.card-img img{
+    height:234px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.card-content{
+    margin-top: 16px;
+    padding: 0px 8px;
+}
+
+.card-title{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #3B3B3B;
+    font-family: "Noto Sans TC", sans-serif; 
+    text-decoration: none;
+}
+
+.card-content ul{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-tag{
+    display: block;
+    border-radius: 16px;
+    padding: 4px 12px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #3B3B3B;
+    background: #F1F1F1;
+    font-family: "Noto Sans TC", sans-serif; 
+    text-decoration: none;
+}
+
+.card-date{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #5B5B5B;
+    font-family: "Noto Sans TC", sans-serif; 
+    text-decoration: none;
+}
+
+.more img{
+    margin-top: 40px;
+    width:124px;
+    height:12px;
+}
+
+/*footer*/
+.footer{
+    margin-top: 120px;
+    background-image: url(/images/footer-bg-lg.png);
+    padding: 80px 16%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.contact img{
+    width: 120px;
+    height: 54px;
+    margin-bottom: 24px;
+}
+
+.contact-me{
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #3B3B3B;
+    font-family: "Noto Sans TC", sans-serif; 
+}
+
+.email{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #919191;
+    font-family: "Noto Sans TC", sans-serif; 
+}
+
+
+.mylink div{
+    border: 1px solid #C1C1C1;
+    border-radius: 8px;
+    width: 306px;
+}
+
+.mylink-a{
+    display: flex;
+    align-items: center;
+    padding: 8px 24px 8px 24px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #3B3B3B;
+    font-family: "Noto Sans TC", sans-serif; 
+    text-decoration: none;
+    text-align: left;
+}
+
+.icon{
+    width:56px;
+    height:56px;
+    margin-right: 8px;
+}
+
+
+.mylink div:hover{
+    border:1 solid #000000;
+    overflow: hidden;
+}
+
+.mylink-a:hover{
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.icon-hover{
+    width:56px;
+    height:56px;
+    margin-right: 8px;
+    display: none;
+}
+
+
+/* Switch icons on hover */
+.mylink div:hover .icon {
+    display: none;
+}
+
+.mylink div:hover .icon-hover {
+    display: block;
+}
+
+
+/*RWD*/
+
+@media (max-width:1462px) {
+    .serives-items-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 20%;
+        padding-right: 20%;
+        gap:24px;
+    }
+
+}
+
+@media (max-width:1315px) {
+    .cardbox{
+        display: flex;
+        gap:24px;
+        flex-direction: column;    
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .hero{
+        display: flex;
+        gap:6px;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    
+
+    .hero-intro-container h1{
+        margin-bottom: 24px;
+        font-size: 30px;
+        line-height: 1.5;
+        font-weight: 600;
+        font-family: "Noto Sans TC", sans-serif;
+    }
+    
+    .hero-intro-items div{
+        display: flex;
+        flex-direction: column;
+        gap:8px;
+        margin-bottom: 16px;
+    }
+    
+    .hero-intro-items .hero-intro-items-person p{
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        font-family: "Noto Sans TC", sans-serif;
+        color: #5B5B5B;
+    
+    }
+    
+    .hero-intro-items p{
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        font-family: "Noto Sans TC", sans-serif;
+        color: #C1C1C1;
+    
+    }
+    
+    .hero-intro-link{
+        display: flex;
+        gap:16px;
+    }
+    
+    .work3-img{
+        z-index: 4;
+        /* position: absolute; */
+        /* bottom: 0px;
+        left: 10%; */
+        width:40%;
+    }
+
+    /*work2*/
+
+.work2:before{
+    right: 30%;
+}
+
+.work2 .work-intro{
+    background-color: rgba(44, 43, 43, 0.074);
+    backdrop-filter: blur(6px); /*模糊效果*/
+}
+
+    }
+
+    @media (max-width:1011px) {
+        .hero-intro-container{
+            margin-right: 10px;
+        }
+        .hero-lg{
+            width:50%;
+        }
+    }
+
+    @media (max-width:820px) {
+        .hero-lg{
+            width:50%;
+        }
+        .footer{
+            margin-top: 120px;
+            padding: 80px 8%;
+            display: flex;
+            justify-content:space-between;
+        }
+        /* work3 */
+        .work3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-image: url(/images/homepage-work3-bg.png);
+            width: 100%;
+            padding: 10% 5%;
+            gap: 2%;
+        }
+        
+        .work3:before{
+            z-index: 3;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* 黑色，40%透明 */
+            pointer-events: none; /* 讓點擊事件穿透偽元素 */
+        }
+        
+        .work3-img{
+            z-index: 2;
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            width:45%;
+        }
+
+        
+    }
+
+    @media (max-width:768px) {
+        
+        .hero-lg{
+            width:40%;
+        }
+
+        .hero-intro-container{
+            margin-bottom: 15px;
+        }
+
+        .hero-intro-container h1{
+            margin-bottom: 12px;
+        }
+        .hero-intro-items div{
+            gap:4px;
+            margin-bottom: 8px;
+        }
+        
+        .hero-intro-link{
+            display: flex;
+            gap:8px;
+        }
+
+        .title{
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .know-more{
+            margin-bottom: 60px;
+        }
+
+        .work-intro-content {
+            border-bottom: 1px solid #F1F1F1;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 40px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
