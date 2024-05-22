@@ -1,0 +1,373 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+img{
+    max-width:100%; /*設定為父元素的寬度*/
+    height:auto;
+    }
+
+ *,*:before,*:after{
+        box-sizing:border-box;
+        }
+
+/*從這裡開始*/
+
+.wrap{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/*header*/
+.header{
+    display: flex;
+    justify-content:center;
+    border-bottom: 1px solid #F1F1F1;
+    background: #FFFFFF;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    top:28px;
+    left: 10%; /*希望隨著螢幕縮減而減少的部分再使用%*/
+}
+
+.hamburger{
+    display: none;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    gap:40px; /*使用%數會導致文字換行*/
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.list-close{
+    display: none;
+}
+
+.list li a{
+    display: block;
+    padding:4px 8px;
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 400;
+    width:100%;
+}
+
+.list li a:hover{
+    font-weight: 600;
+}
+
+/*content*/
+.intro{
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    align-items: center;
+}
+
+.intro-top{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    width: 670px;
+    height: 192px;
+    position: relative;
+    justify-content: center;
+}
+
+.intro .intro-top span{
+    position: relative;
+    z-index: 5;
+}
+
+.intro .intro-top h4{
+    z-index: 5;
+}
+
+.intro-top span img{
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    z-index: -1;
+}
+
+.intro-top .quote-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+}
+
+.intro-top .quote-right{
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    bottom: 0;
+    right: 0;
+}
+
+
+.intro-top h4{
+    text-align: center;
+    font-size: 24px;
+    line-height: 28.8px;
+    font-weight: 400;
+    color: #1E1E1E;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.intro-bottom{
+    display: flex;
+    justify-content:space-between;
+    width:636px;
+    gap: 40px;
+}
+
+.experience{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Noto Sans TC", sans-serif;
+    text-align: center;
+}
+
+.ex-title{
+    color:#5B5B5B ;
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    position: relative;
+}
+
+.ex-title::before{
+    content: "";
+    width: 24px;
+    height: 2px;
+    background: #C1C1C1;
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.ex-content{
+    color: #3B3B3B;
+}
+
+/*footer*/
+.footer{
+    background-image: url(./images/footer-bg-lg.png);
+    padding: 80px 16%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.contact img{
+    width: 120px;
+    height: 54px;
+    margin-bottom: 24px;
+}
+
+.contact-me{
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #3B3B3B;
+    font-family: "Noto Sans TC", sans-serif; 
+}
+
+.email{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #919191;
+    font-family: "Noto Sans TC", sans-serif; 
+}
+
+
+.mylink div{
+    border: 1px solid #C1C1C1;
+    border-radius: 8px;
+    width: 306px;
+}
+
+.mylink-a{
+    display: flex;
+    align-items: center;
+    padding: 8px 24px 8px 24px;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #3B3B3B;
+    font-family: "Noto Sans TC", sans-serif; 
+    text-decoration: none;
+    text-align: left;
+}
+
+.icon{
+    width:56px;
+    height:56px;
+    margin-right: 8px;
+}
+
+
+.mylink div:hover{
+    border:1 solid #000000;
+    overflow: hidden;
+}
+
+.mylink-a:hover{
+    background: #000000;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.icon-hover{
+    width:56px;
+    height:56px;
+    margin-right: 8px;
+    display: none;
+}
+
+
+/* Switch icons on hover */
+.mylink div:hover .icon {
+    display: none;
+}
+
+.mylink div:hover .icon-hover {
+    display: block;
+}
+
+
+/*RWD*/
+
+ @media (max-width:820px) {
+        .footer{
+            margin-top: 120px;
+            padding: 80px 8%;
+            display: flex;
+            justify-content:space-between;
+        }
+    }
+
+@media (max-width:768px) {
+        
+        /* 表頭 */
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+        }
+
+        .hamburger{
+            display: inline-block;
+            background: none;
+            border: none;
+        }
+
+        .logo{
+            position: unset;
+        }
+        
+        .list{
+            display: none;
+        }
+
+        .list-open{
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            top: 100%;
+            text-align: center;
+            z-index: 10;
+            background-color: #FFFFFF;
+            width: 100%;
+            margin-top: 0;
+            padding: 20px;
+        }
+
+        .hamburger .close{
+            display: none;
+        }
+
+        /* 表尾 */
+        .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .mylink div{
+            border: 1px solid #C1C1C1;
+            border-radius: 8px;
+            width: 306px;
+        }
+
+        .contact{
+            margin-bottom: 32px;
+        }
+    }
+
+@media (max-width:430px) {
+    .header{
+        padding: 10px 10px;
+    }
+    }
