@@ -72,10 +72,18 @@ img{
     position: relative;
 }
 
+.phone-menu{
+    display: none;
+}
+
 .logo{
     position: absolute;
     top:28px;
     left: 10%; /*希望隨著螢幕縮減而減少的部分再使用%*/
+}
+
+.hamburger{
+    display: none;
 }
 
 .list {
@@ -167,7 +175,6 @@ img{
     font-weight: 400;
     font-family: "Noto Sans TC", sans-serif;
     color: #C1C1C1;
-
 }
 
 .hero-intro-link{
@@ -738,6 +745,49 @@ img{
 
     @media (max-width:768px) {
         
+        /* 表頭 */
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width: 100%;
+        }
+
+        .hamburger{
+            display: inline-block;
+            background: none;
+            border: none;
+        }
+
+        .logo{
+            position: unset;
+        }
+        
+        .list{
+            display: none;
+        }
+
+        .list-open{
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            top: 100%;
+            text-align: center;
+            z-index: 10;
+            background-color: #FFFFFF;
+            width: 100%;
+            margin-top: 0;
+            padding: 20px;
+        }
+
+        .hamburger .close{
+            display: none;
+        }
+
+
+        /* 內容 */
+
         .hero-lg{
             width:40%;
         }
@@ -768,12 +818,100 @@ img{
             margin-bottom: 60px;
         }
 
-        .work-intro-content {
-            border-bottom: 1px solid #F1F1F1;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-top: 40px;
-            margin-left: 20px;
-            margin-right: 20px;
+        /* 表尾 */
+        .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+        
+        .mylink div{
+            border: 1px solid #C1C1C1;
+            border-radius: 8px;
+            width: 306px;
+        }
+
+        .contact{
+            margin-bottom: 32px;
+        }
+
+        /*修正hero區塊*/
+
+        .hero-intro-container h1{
+            margin-bottom: 12px;
+            font-size: 24px;
+            line-height: 32px;
+        }
+        
+        .hero-intro{
+            margin-left: 5%;
+        }
+
+        .hero-intro-items div{
+            gap:4px;
+            margin-bottom: 8px;
+        }
+        
+        .hero-intro-items .hero-intro-items-person p{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        
+        .hero-intro-items p{
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .content{
+            margin-top: 10px;
+        }
+
+        .hero-intro-link img{
+            width: 40px;
+            height: auto;
+        }
+        
+    }
+
+    @media (max-width:430px) {
+        .header{
+            padding: 10px 10px;
+        }
+        .content{
+            margin-top: 30px;
+        }
+
+        .hero{
+            flex-direction: column;
+        }
+
+        .hero-lg{
+            margin-top: 40px;
+            width:100%;
+        }
+        
+        .work-intro-content ul{
+            flex-wrap: wrap;
+        }
+
+        /* .articles-items .cardbox .card{
+            padding-left: 1%;
+            padding-right: 1%;
+        } */
+
+        .serives-items-list div{
+            width: 200px;
+            height: 200px;
+        }
+        .serives{
+            background-image:none;
+        }
+        .work2:before{
+            right:0;
+        }
+        .card{
+            width: 300px;
+            height: auto;
+        }
+        
     }
